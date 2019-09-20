@@ -1,0 +1,61 @@
+/* 公共样式 */
+
+@charset "utf-8";
+
+/* 倒三角 */
+
+.triangle-down {
+    border: 5px solid #666;
+    border-style: solid dashed dashed;
+    border-color: #666 transparent transparent;
+    width: 0;
+    height: 0;
+}
+
+
+/* 单三角 */
+
+.triangle-up {
+    position: relative;
+}
+
+.triangle-up:before,
+.triangle-up:after {
+    content: " ";
+    border: 5px solid #ccc;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #ccc;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+}
+
+.triangle-up:after {
+    border-color: transparent transparent #fff;
+    top: -8px;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+
+/* 弹出层背景颜色 */
+
+.over-bgc {
+    background-color: #fff;
+}
